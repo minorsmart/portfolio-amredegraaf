@@ -1,13 +1,13 @@
 body{
 	background-color: rgb(222,222,222);
+	font-family: Lato;
+	
 }
 .box{
 	float: left;
 	width: 30%;
-	padding: 50px; 
-	font size: 100px;
-	font-family: Lato;
-	font-style: bold;
+	padding: 50px;
+	font-weight: bold;
 	letter-spacing: 10px;
 	margin-top: 150px;
 	color: darkgrey;
@@ -15,6 +15,7 @@ body{
 }
 .box h1{
 	display: inline-block;
+	font-size:50px;
 }
 img{
 	margin-left: 0px;
@@ -143,8 +144,7 @@ img{
 	bottom: 0;
 	width: 100%;
 	font-size: : 30px;
-	font-family: Lato;
-	font-style: bold;
+	font-weight: bold;
 	letter-spacing: 10px;
 	background-color: white
 
@@ -169,18 +169,91 @@ img{
 
 #inhoud h1{
 	text-align: center;
-	font size: 100px;
 	font-family: Lato;
-	font-style: bold;
+	font-weight: bold;
 	letter-spacing: 10px;
 	color: darkgrey;
 }
 #inhoud p{
 	text-align: justify;
 	margin: 5px 15% 80px 15%;
-	font-family: lato;
-	font-style:10000000000;
+	font-weight:bold;
 	font-size: 18px;
 	letter-spacing: 3px;
 	color: darkgrey;
-}	
+}
+#inhoud li{
+	text-align: justify;
+	margin-left: 18%;
+	margin-right: 15%;
+	margin-bottom: 0px;
+	font-weight:bold;
+	font-size: 18px;
+	letter-spacing: 3px;
+	color: darkgrey;
+	}
+
+.boxx{
+	float: left;
+	width: 20%; 
+	font-weight: bold;
+	letter-spacing: 7px;
+	color: darkgrey;
+	resize: vertical;
+}
+.card{
+	border-radius: 5px;
+	padding:5px darkgrey;
+	margin-top:38px;
+}
+
+.collapsible {
+  background-color: darkgrey;
+  color: rgb(222,222,222) ;
+  font-family: lato;
+  font-weight: bold;
+  letter-spacing: 2px;
+  cursor: pointer;
+  padding-left: : 18px;
+  padding-right: 18px;
+  padding:18px;
+  width: 50%;
+  text-align: center;
+  border:none;
+  font-size: 15px;
+  margin-left: 25%;
+  margin-right: 25%;
+  transition: width 0.8s, background-color 0.8s, margin-left 0.8s, margin-right 0.8s;
+}
+.collapsible:hover {
+  background-color: lightblue;
+
+}
+.collapsible:after {
+  content: '\002B';
+  color:  rgb(222,222,222);
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+.active{
+	background-color: darkgrey;
+	width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+.active:after {
+  content: "\2212";
+}
+.content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.8s ease-out;
+  
+}
+.centerimage {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}

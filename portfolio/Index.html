@@ -4,7 +4,7 @@
 		<title>Portfolio Amre de Graaf</title>
 		<link rel="stylesheet" type="text/css" href="Opmaak.css">
 		<link href='https://fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'>
-		<link rel="shortcut icon" href="Images/icon.jpeg" />
+		<link rel="shortcut icon" href="Images/icon.png" />
 </head>
 <body>
 
@@ -35,7 +35,8 @@
 	<div class="box">
 		<h1 class="naam1">AMRE DE GRAAF</h1>
 		<h3 class="ondertitel1">PORTFOLIO</h3>
-		<h3 class="ondertitel1">MINOR SMART INDUSTRY</h3>
+		<h3 class="ondertitel1">MINOR SMART INDUSTRY</h3><br>
+		<div class="clock" style="font-size: 20px;">Getting the time...</div>
 	</div>
 
 	<div>
@@ -47,6 +48,101 @@
 	</ul>
 	</div>
 
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
+<link href="https://fonts.googleapis.com/css?family=Raleway:200,100,400" rel="stylesheet" type="text/css" />
+<h1 style="
+  font-family: Lato;
+  padding: 1em 2em;
+  font-size: 60px;
+  letter-spacing: 15px;
+  color: darkgrey;
+  text-align: center;
+}
+" >Smart
+  <span class="txt-rotate" data-period="2000"
+    data-rotate='[ "Industry", "Business", "Start", "Technology", "Project","Connection" ]'></span>
+</h1>
+<script type="text/javascript">var TxtRotate = function(el, toRotate, period) {
+  this.toRotate = toRotate;
+  this.el = el;
+  this.loopNum = 0;
+  this.period = parseInt(period, 10) || 2000;
+  this.txt = "";
+  this.tick();
+  this.isDeleting = false;
+};
+
+TxtRotate.prototype.tick = function() {
+  var i = this.loopNum % this.toRotate.length;
+  var fullTxt = this.toRotate[i];
+
+  if (this.isDeleting) {
+    this.txt = fullTxt.substring(0, this.txt.length - 1);
+  } else {
+    this.txt = fullTxt.substring(0, this.txt.length + 1);
+  }
+
+  this.el.innerHTML = '<span class="wrap">' + this.txt + "</span>";
+
+  var that = this;
+  var delta = 300 - Math.random() * 100;
+
+  if (this.isDeleting) {
+    delta /= 2;
+  }
+
+  if (!this.isDeleting && this.txt === fullTxt) {
+    delta = this.period;
+    this.isDeleting = true;
+  } else if (this.isDeleting && this.txt === "") {
+    this.isDeleting = false;
+    this.loopNum++;
+    delta = 500;
+  }
+
+  setTimeout(function() {
+    that.tick();
+  }, delta);
+};
+
+window.onload = function() {
+  var elements = document.getElementsByClassName("txt-rotate");
+  for (var i = 0; i < elements.length; i++) {
+    var toRotate = elements[i].getAttribute("data-rotate");
+    var period = elements[i].getAttribute("data-period");
+    if (toRotate) {
+      new TxtRotate(elements[i], JSON.parse(toRotate), period);
+    }
+  }
+ 
+  var css = document.createElement("style");
+  css.type = "text/css";
+  css.innerHTML = ".txt-rotate > .wrap { border-right: 0.04em solid darkgrey }";
+  document.body.appendChild(css);
+};
+</script>
+<script type="text/javascript">
+    function clock() {
+       
+        var time = new Date(),
+            
+            hours = time.getHours(),
+            
+            minutes = time.getMinutes(),
+            seconds = time.getSeconds();
+
+        document.querySelectorAll(".clock")[0].innerHTML =
+            harold(hours) + ":" + harold(minutes) + ":" + harold(seconds);
+
+        function harold(standIn) {
+            if (standIn < 10) {
+                standIn = "0" + standIn;
+            }
+            return standIn;
+        }
+    }
+    setInterval(clock, 1000);
+</script>
 </body>
 </html>

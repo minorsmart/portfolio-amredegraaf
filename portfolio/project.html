@@ -4,7 +4,7 @@
     <title>Portfolio Amre de Graaf</title>
     <link rel="stylesheet" type="text/css" href="Opmaakparagrafen.css">
     <link href='https://fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'>
-    <link rel="shortcut icon" href="Images/icon.jpeg" />
+    <link rel="shortcut icon" href="Images/icon.png" />
 </head>
 <body>
 
@@ -37,6 +37,7 @@
     <h1 class="naam1">PROJECT</h1>
     <h3 class="ondertitel1">AMRE DE GRAAF</h3>
     <h3 class="ondertitel1">MINOR SMART INDUSTRY</h3>
+    <div class="clock" style="font-size: 20px;">Getting the time...</div>
   </div>
 
   <div>
@@ -57,7 +58,82 @@
   consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
   cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
   proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+
+ <br>
+
+<button type="button" class="collapsible">Week 1</button>
+<div class="content">
+  <p>In deze week werd allereerst een korte introductie gegeven van het vak Smart Connection en de nodige software en webpagina's. Vooral de introductie die is gegeven over de online omgeving van de HAN, die erg afwijkt van de online omgeving die ik gewend ben van Avans, was voor mijn erg nuttig. Verder heb ik in de voorbereiding van de les een aantal programma's geïnstalleerd die later in de minor nog gebruikt gaan worden.<br>
+  In deze les is ook een begin gemaakt aan het maken van de webpagina waarop je portfolio gepresenteerd gaat worden. Het eerste ontwerp ging aan de hand van een schets die op papier is gemaakt.</p> <br>
+</div>
+<button type="button" class="collapsible">Week 2</button>
+<div class="content">
+  <p>In de tweede week ligt de focus op het maken van de webpagina waarop later het portfolio gepresenteerd zal worden. Als voorbereiding op deze les heb ik de 'crash course' filmpjes gekeken die op moodle staan en daarbij direct alles wat in het filmpje gebeurd herhalen op mijn eigen laptop. Wat ik hier merkte was dat de basis van het html en css programmeren erg snel te begrijpen is. Als voorbereiding van de les heb ik <a href="Opdracht C2.html" target="_blank" style="color: navy; text-decoration: none;">dit bestand</a> ingeleverd.<br>
+  Tijdens de les is er verder ingegaan op de filmpjes, omdat ik het idee had dat ik die stof al tot me genomen had ben ik verder gegaan met het personaliseren en verder uitbreiden van mijn start voor de webpagina. Tijdens de les heb ik hier een mooi begin kunnen maken aan het ontwerp wat ik later thuis heb afgemaakt. Het ontwerp wat hieruit is gekomen heb ik ook gebruikt als ontwerp van het portfolio zoals u het nu ziet. De basis hiervan is in week 2 tot stand gekomen.</p>
+</div>
+<button type="button" class="collapsible">Week 3</button>
+<div class="content">
+  <p>In week 3 wordt de webpagina verder uitgebreid door het gebruik van JavaScript, dit geeft je de mogelijkheid om interactie op je pagina toe te voegen wat de mogelijkheden van verschillende vormen van weergave enorm verbreedt. </p>
+</div>
+<button type="button" class="collapsible">Week 4</button>
+<div class="content">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+<button type="button" class="collapsible">Week 5</button>
+<div class="content">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+<button type="button" class="collapsible">Week 6</button>
+<div class="content">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+<button type="button" class="collapsible">Competenties</button>
+<div class="content">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 </div>
 
+</div>
+</div>
+<br><br><br><br>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+<script type="text/javascript">
+    function clock() {
+       
+        var time = new Date(),
+            
+            hours = time.getHours(),
+            
+            minutes = time.getMinutes(),
+            seconds = time.getSeconds();
+
+        document.querySelectorAll(".clock")[0].innerHTML =
+            harold(hours) + ":" + harold(minutes) + ":" + harold(seconds);
+
+        function harold(standIn) {
+            if (standIn < 10) {
+                standIn = "0" + standIn;
+            }
+            return standIn;
+        }
+    }
+    setInterval(clock, 1000);
+</script>
 </body>
 </html>
